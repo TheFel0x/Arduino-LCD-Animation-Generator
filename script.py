@@ -17,6 +17,8 @@ if not os.path.exists(s_text):
     os.makedirs(s_text)
 if not os.path.exists(out_loc):
     os.makedirs(out_loc)
+if not os.path.exists(os.path.join(out_loc,"output")):
+    os.makedirs(os.path.join(out_loc,"output"))
 
 print("Please place frames in "+b_frames+" and press enter.\n")
 input("[Press ENTER when you're ready.]\n")
