@@ -9,11 +9,6 @@ s_text = os.path.join(wd,"2-small_text")
 out_loc = os.path.join(wd, "3-output_file")
 out_file = os.path.join(os.path.join(out_loc, "output"),"output.ino")
 
-print("Please place frames in "+b_frames+" and press enter.\n")
-input("[Press ENTER when you're ready.]\n")
-print(str(len(os.listdir(b_frames)))+" files found.\n")
-print("The folders 1 to 3 will be cleared. be sure that there's nothing you need still in there.\n")
-input("[Press ENTER to start.]\n")
 if not os.path.exists(b_frames):
     os.makedirs(b_frames)
 if not os.path.exists(s_frames):
@@ -22,6 +17,12 @@ if not os.path.exists(s_text):
     os.makedirs(s_text)
 if not os.path.exists(out_loc):
     os.makedirs(out_loc)
+
+print("Please place frames in "+b_frames+" and press enter.\n")
+input("[Press ENTER when you're ready.]\n")
+print(str(len(os.listdir(b_frames)))+" files found.\n")
+print("The folders 1 to 3 will be cleared. be sure that there's nothing you need still in there.\n")
+input("[Press ENTER to start.]\n")
 # Clearing folders
 print("Clearing "+s_frames)
 for f in os.listdir(s_frames):
